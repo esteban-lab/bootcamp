@@ -1,27 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cheatingmyself</title>
 </head>
+
 <body>
 
     <!--comentarios obviados por el html-->
     <a href="https://google.com">Ir a google</a>
     <a href="folder/blog.html">blog</a>
+
+    <!--br linea en blanco-->
+    <br><br>
+    <!--hr  linea separadora-->
+    <hr>
+    <!--headings / titulos 1 titulo grande a-->
+    <h1>Titulo 1</h1>
+    <!-- headings / titulo 2 mas pequeño-->
+    <h2>titulo 2</h2>
+    <h3>titulo 3</h2>
+    <h4>titulo 4</h2>
+    <h5>titulo 5</h2>
+    <h6>titulo 6</h2>
+
+     <p>ESto es un parrafo</p>
+     <p>
+            Lorem ipsum <b>dolor sit ame
+                t</b>, consectetur adipisicing elit. 
+                
+                
+                <em>Cupiditate<s> id voluptate </s>saepe alias,</em>
+            sed ullam repellat<strong> accusanti
+                
+                um ab dolor</strong> quae placeat ipsum accusamus rem? Repellendus nulla cum
+            dignissimos vel dolore!
+    </p>
+    
   
-<!--br linea en blanco-->
-<br><br>
-<!--hr  linea separadora-->
-<hr>
-<!--headings / titulos 1 titulo grande a-->
-<h1>Titulo 1</h1>
-<!-- headings / titulo 2 mas pequeño-->
-<h2>titulo 2</h2>
+    <pre>
+        Lorem ipsum <b>dolor sit ame
+            t</b>, consectetur adipisicing elit. 
+            
+            
+            Cupiditate id voluptate saepe alias,
+        sed ullam repellat<strong> accusanti
+            
+            um ab dolor</strong> quae placeat ipsum accusamus rem? Repellendus nulla cum
+        dignissimos vel dolore!  
+    </pre>
+
+    <p>
+        Lorem ipsum <b>dolor sit ame
+            t</b>, consectetur adipisicing elit. 
+            Cupiditate id voluptate saepe alias,
+        sed ullam repellat<strong> accusanti
+            
+            um ab dolor</strong> quae<span class="ingredientes"> placeat ipsum accusamus</span> rem? Repellendus nulla cum
+        dignissimos vel dolore!   
+    </p>
+
+    <p>
+        la cafeina es el elemento  mas importante en la tierra
+        c<sub>8</sub>m<sub>21</sub>
+
+        la cafeina es el elemento  mas importante en la tierra
+        c<sup>8</sup>m<sup>21</sup>
+    </p>
+
+
+   
+ <p> 
+    las clases del bootccamp empiezan alas<time datetime="9:30"> 9.30</time>
+    dia fue el <time datetime="2021-01-01"> 1 de enero </time>
+</p>
+<br><hr><br>
+
+
+<!--contenedores, containers-->
+
+<nav>
+    <a href="" class="myclass">enlace 1</a>
+    <a href="" class="myclass">enlace 2</a>
+    <a href="" class="myclass">enlace 3</a>
+</nav>
+<section>
+ <article>
+     <h1>titulo del articulo</h1>
+     <p>contenido del articulo</p>
+ </article>
+    <a href="">leer mas</a>
+</section>
 
 
 
 
+
+<aside>
+    <p>menu lateral</p>
+</aside>
+
+<footer>
+ <p>pie de pagina</p>
+ <address>malaga cerrado</address>
+</footer>
+
+
+
+<div class="conta"><p>contenedor generico para agrupar elementos</p></div>
+
+<br><hr><br>
+
+<!--listas / lists-->
+
+<ul> <!--desordenada-->
+    <li>elemento5</li>
+    <li>elemento4</li>
+    <li>elemento3</li>
+    <li>elemento2</li>
+    <li>elemento1</li>
+</ul>
+
+<ol>
+    <li>elemento 1</li>
+    <li>elemento 2
+        <ul>
+            <li>elemento </li>
+            <li>elemento </li>
+        </ul>
+    </li>
+    <li>elemento 3</li>
+</ol>
+
+<ol start="500">
+    <li>elemento 1</li>
+    <li>elemento 2</li>
+    <li>elemento 3</li>
+</ol>
+
+<!--tablas-->
+
+<table>
+    <thead>
+        <tr>
+           <th>nombre</th>
+           <th>email</th>
+           <th>edad</th> 
+        </tr>
+    </thead>
+    <body>
+        <tr>
+            <td>jhon snow</td>
+            <td>tebasone.com</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>jhon snow</td>
+            <td>tebasone.com</td>
+            <td>12</td>   
+        </tr>
+        <tr>
+            <td>jhon snow</td>
+            <td>tebasone.com</td>
+            <td>31</td>   
+        </tr>
+        <tfoot>
+            <tr>
+                <th>jhon snow</th>
+                <th>tebasone.com</th>
+                <th>31</th>   
+        </tfoot>
 </body>
+</table>
+
+<br><hr><br>
+<!--formularios / forms-->
+
+<form action="" method="get">
+    
+    <div class= "inputblock">
+        <label for="nameinput">Nombres</label><br>
+        <input type="text" id="nameinput" name="username" placeholder="escribe tu nombre">
+    </div><br>
+
+    <div class="imputblock">
+        <label for="lastnameinput">apellidos</label><br>
+        <input type="text" id="lastnameinput" name="lastname" placeholder="escribe tus apellidos">
+    </div><br>
+
+    <div class="imputblock">
+        <label for="lastnameinput">email</label><br>
+        <input type="email" id="emailinput" name="lastname" placeholder="escribe tu email">
+    </div><br>
+
+    <div class="imputblock">
+        <label for="passswordinput">contraseña</label><br>
+        <input type="password" id="passwrodinput" name="passwordinput" placeholder="*******">
+    </div><br>
+
+    <div class="imputblock">
+        <label for="messageinput">mensaje</label><br>
+        <textarea id="messageinput" name="messageinput" cols="50" rows="10"></textarea>
+    </div><br>
+
+    <div class="imputblock">
+        <label for="sex">Genero</label><br>
+        <select name="sexinput" id="sexinput">
+            <option value=""hidden></option>
+            <option value="female">femenino</option>
+            <option value="male">masculino</option>
+            <option value="other">otro</option>
+        </select><br>
+
+        
+    </div>
+    <br><br>
+
+    <input type="submit" value="guardar">
+    <br><br>
+    <input id = "ageinput" name="ageinput" type="number"  placeholder="18" min="0" max="120">
+    <br><br>
+
+    <input type="date" name="date">
+
+
+
+
+
+</form>
+
+
+<br><br><br><br><br>
+</body>
+
 </html>
