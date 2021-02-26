@@ -217,22 +217,101 @@
         
     </div>
     <br><br>
+    <div class="imputblock">
+        <label for="ageimput">edad</label>
+        <input id = "ageinput" name="ageinput" type="number"  placeholder="18" min="0" max="120">
+        
+        <label for="birthdayinput">Fecha de nacimiento</label>
+        <input type="date" name="date">
+    </div>
 
+<br><br><br>
+
+<div class="inputblock">
+        <label for="carbrandinput">la marca de tu coche</label>
+        <input type="text" id="carbrandinput" name="carbrand " list="carbrandlist">
+        <datalist id = "carbrandlist">
+                <option value="bmw">bmw</option>
+                <option value="mercedez">merdecedez</option>
+                <option value="mustang">mustang</option>
+                <option value="ford">ford</option>
+        </datalist>
+</div>
+
+<br><br>
+<fieldset disabled>
+    <legend>informacion de tu pareja</legend><br>
+    <div class= "inputblock">
+        <label for="nameinput">Nombres</label><br>
+        <input type="text" id="nameinput" name="username" placeholder="escribe tu nombre">
+    </div><br>
+
+    <div class="imputblock">
+        <label for="lastnameinput">apellidos</label><br>
+        <input type="text" id="lastnameinput" name="lastname" placeholder="escribe tus apellidos">
+    </div><br>
+</fieldset>
+
+<fieldset>
+    <legend>Estado civil</legend>
+    <div>
+        <input type="radio" name="civilstate" id="marriedinput">
+        <label for="radio">casado</label>
+    </div>
+    <div>
+        <input type="radio" name="civilstate" id="singleinput">
+        <label for="radio">soltero</label>
+    </div>
+    <div>
+        <input type="radio" name="civilstate" id="happy" required>
+        <label for="radio">divorciado</label>
+    </div>
+    </div>
+</fieldset>
+
+
+<fieldset>
+    <legend>productos</legend>
+    <div>
+        <input type="checkbox" name="iphoneproduct" id="iphoneproduct">
+        <label for="checkbox">iphone</label>
+    </div>
+    <div>
+        <input type="checkbox" name="macbook product" id="macbook product">
+        <label for="checkbox">macbook pro</label>
+    </div>
+    <div>
+        <input type="checkbox" name="airpods product" id="airpods product">
+        <label for="checkbox">airpods</label>
+    </div>
+
+</fieldset>
+<br><br>
+
+    <label for="rangeinut">selecciones cantidad e elemntos</label>
+    <input type="range" name="rangeinput" id="rangeinput">
+
+    <label for="">cantidad de gasolina</label>
+    <meter min="0"max="100"id="fuellevel" value="60" ></meter>
+
+    <progress max="100" value="33"></progress>
+
+<br><br><br><br>
+
+    <input type="reset" value="vaciar">
     <input type="submit" value="guardar">
-    <br><br>
-    <input id = "ageinput" name="ageinput" type="number"  placeholder="18" min="0" max="120">
-    <br><br>
 
-    <input type="date" name="date">
+<br><br><br>
 
 
+<label for="fileinput">Subir una foto</label>
 
-
+<input type="file" id="fileinput" name = "fileinput">
 
 </form>
 
 
-<br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 </body>
 
 </html>
