@@ -1,8 +1,6 @@
-*{
-  font:1em/1.3 arial, helvetica,sans-serig;}
+*{font:1em/1.3 arial, helvetica,sans-serig;}
 
-p{
-    color: #555; }
+p{color: #555; }
 
 #primero p{
   color: #336699; }
@@ -20,3 +18,6 @@ em.especial {
 }    
 
 .normal span {font-weight: bold;}
+
+
+
