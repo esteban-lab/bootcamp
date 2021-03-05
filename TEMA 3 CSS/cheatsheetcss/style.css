@@ -17,9 +17,155 @@
 
 /*centrar horizontalmente eje x*/
 
-.x-centered {
+.rectangle {
     background-color: seagreen;
     height: 50px;
     width: 25%;
-   margin: auto;
+   
+}
+
+/* centrar horizontalmente en eje x*/
+
+.x-centered {
+    margin: auto;
+}
+
+/* posicion post relative x*/
+
+.pos-relative{
+    position: relative;
+    left: 150px;
+    top: -50px;
+    z-index: -1;
+}
+
+/*posicion absoluta*/
+.pos-absolute-parent{
+    height: 300px;
+    border: 15px solid tomato;
+
+    position: relative;
+}
+
+.pos-absolute-child{
+    height: 50px;
+    width: 50px;
+    background-color: #333;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+/*posicion fija*/
+.pos-fixed {
+    background-color: #333;
+    padding: 20px 30px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.pos-fixed a{
+    color: white;
+    text-decoration: none;
+
+}
+
+/*posicion sticky una vez el scroll llega se queda pegado*/
+.pos-sticky{
+   background-color: rgb(214, 127, 231);
+   padding: 15px 25px;
+
+   position: sticky;
+   top: 0;
+}
+
+.pos-sticky a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*posicion flotamte   (comando clear respeta a los demasy toma su propia posicion*/
+
+
+.pos-float-parent{
+    border: 5px solid rgb(163, 231, 85);
+/*averflow hidden hace que se respete el recuadrosin necesidad de tener una cuarta caja*/
+    overflow: hidden;
+}
+
+.pos-float-child-1{
+    background-color: blueviolet;
+    height: 100px;
+    width: 33.3%;
+    float: left;
+
+   
+}
+
+.pos-float-child-2{
+    background-color: rgb(79, 206, 47);
+    height: 100px;
+    width: 33.3%;
+    float: left;
+}
+.pos-float-child-3{
+    background-color: cadetblue;
+    height: 100px;
+    width: 33.3%;
+    float: left;
+}
+/*.pos-float-child-4{
+    background-color: rgb(230, 227, 63);
+    height: 50px;
+    width: 100%;
+    clear: both;
+}*/
+
+
+
+/*overflow -  gestion de desbordamiento del contenido*/
+
+[class^="overflow-parent"]{
+    width: 200px;
+    height: 100px;
+    border: 3px dashed black;
+    margin-bottom: 200px;
+}
+    
+ .overflow-parent-1{
+    overflow: hidden;
+    }
+
+ .overflow-parent-2{
+    overflow:visible;
+    }
+
+.overflow-parent-3{
+    overflow: scroll;
+}
+
+/* tamaño de cajas */
+
+.box-sizing-parent{
+    width: 200px;
+    height: 200px;
+    border: 10px solid yellow;
+}
+
+.box-sizing-child{
+    width: 100%;
+    height:50px ;
+    background-color: teal;
+    border: 10px solid green;   
+    box-sizing: content-box;
+}
+
+.border-box{
+    margin-top: 10px;
+    box-sizing: border-box;
 }
