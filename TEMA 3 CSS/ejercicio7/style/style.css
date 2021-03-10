@@ -1,0 +1,65 @@
+body{
+    
+background-color: rgb(175, 129, 175);
+
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    margin: auto;
+
+   display: flex ;
+   flex-direction: column;
+   background-color: white;
+   
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    color: rgb(184, 173, 173);
+    
+}
+
+.cartitas{
+    height: 20px;
+    border-radius: 8%;
+    margin: auto;
+    width: 70%;
+    margin-top: 20px;
+    column-gap: 15%;
+    background-color: rgb(184, 173, 173);
+   
+    display: flex;
+    justify-content: center;
+}
+
+.divfooter{
+    height: 70px;
+    background-color: rgb(184, 173, 173);
+    width: 70px;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 80%;
+   
+    display: flex;
+    justify-content: center;
+
+} 
+
+
+.cero{
+    height: 10px;
+    width: 10px;
+}
+.divfooter-1 {
+    height: 20px;
+    background-color: rgb(184, 173, 173);
+    width: 80px;
+    margin: auto;
+    margin-bottom: 90%;
+    
+
+}
