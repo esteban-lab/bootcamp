@@ -258,3 +258,90 @@
     flex-basis: 250px; */
     flex:  1 250px;
 }
+
+
+
+.corazon{
+    color: red;
+}
+
+/* degradados */
+[class^=gradient]{
+    height: 400px;
+    background-color: teal;
+    margin-bottom: 10px;
+}
+
+.gradient-1{
+    background:linear-gradient(to right, darkblue, white
+    ) ;
+}
+.gradient-2{
+    background:linear-gradient(to bottom, white, darkblue
+    ) ;
+}
+.gradient-3{
+    height: 600px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)),url(/cheatsheetcss/sanfran.jpeg);
+    background-size: cover;
+}
+
+.gradient-4{
+    background: radial-gradient(white, rgb(85, 85, 92),rgb(34, 28, 28));
+    width: 50%;
+    box-shadow: 50px 25px 15px black;
+}
+/* transformaciones */
+
+.transform{
+    height: 100px;
+    width: 100px;
+    background-color:rgb(81, 125, 167);
+
+    transform: translate(300px, -20px) rotate(25deg) scale(1.5) skewx( 25deg);
+
+}
+
+.transitions {
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+    background-color: rgb(80, 163, 136);
+    color: white;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* transition-property: transform;
+    /*transition-duration: 0.5s;
+    transition-delay: 0.2s;
+    transition-timing-function:ease-in-out; */
+    transition: all 0.5s ease-in-out;
+}   
+
+.transitions:hover {
+    transform: scale(1.3) rotate(3deg);
+
+}
+
+
+/* animaciones */
+.text-animations{
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+         margin-left: 100%;   
+    }
+  
+    to {
+        margin-left: 0%;
+    }
+
+}
+
