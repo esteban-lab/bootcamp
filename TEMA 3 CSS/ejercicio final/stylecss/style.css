@@ -36,9 +36,9 @@ body{
     
 }
 
-form.main > .email{
+.email{
     width: 100%;
-    height: 15px;
+    
 }
 
 .img{
@@ -46,7 +46,9 @@ form.main > .email{
     
 }
 
-
+.pass{
+    width: 100%;
+}
 
 hr.line{
     width: 100%;
@@ -56,7 +58,7 @@ hr.line{
 
 }
     
-nav > input.entrar{
+input.entrar{
     background-color: rgb(94, 61, 126);
     width: 100%;
     height: 35px;
@@ -68,7 +70,7 @@ nav > input.entrar{
     cursor: pointer;
 }
 
-nav > .input1{
+.input1{
     width: 100%;
     margin-bottom: 10px;
     height: 40px;
@@ -78,7 +80,7 @@ nav > .input1{
   
 
 }
-nav > .input2{
+.input2{
     width: 100%;
     margin-bottom: 10px;
     height: 40px;
