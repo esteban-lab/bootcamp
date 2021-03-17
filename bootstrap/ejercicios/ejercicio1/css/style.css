@@ -1,0 +1,56 @@
+
+.auto-1{
+    background-image: url(../images/auto1.jpeg);
+    height: 600px;
+    width: 300px;
+    background-position: center;
+    display: inline-block;
+    position: relative;
+
+
+}
+
+.auto-2{
+    background-image: url(../images/auto2.jpeg);
+    height: 600px;
+    width: 300px;
+    background-position: center;
+}
+
+.auto-3{
+    background-image: url(../images/lambo.jpeg);
+    height: 600px;
+    width: 300px;
+    background-position: center;
+}
+
+h3{
+    text-align: center;
+    padding:20px ;
+}
+
+.texto1 {
+    position: absolute;
+    bottom: 110px;
+    left:20%;
+    font-size: 30px;
+    color: white;
+}
+.texto2 {
+    position: absolute;
+    bottom: 80px;
+    left: 20%;
+    font-size: 30px;
+    color: white;
+}
+
+
+
+.box1, .box2, .box3, .box4, .box5, .box6{
+    background-image: url(../images/holder.png);
+    height: 600px;
+    width: 300px;
+    background-position: center;
+    height: 120px;
+
+}

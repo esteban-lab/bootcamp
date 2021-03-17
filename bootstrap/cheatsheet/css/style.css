@@ -1,10 +1,14 @@
-div {
+.sized {
+  height: 100px;
+}
+
+#mi-container {
   background-color: red;
 }
-div a {
+#mi-container a {
   color: white;
 }
-div button {
+#mi-container button {
   height: 100%;
 }
 
