@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet javascript</title>
+    <style>
+        a {
+            font-size: 3em;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+        <h1>Procesar Javascript</h1>
+        <a href="#" onclick="alert(`hola desde un script inline`)" >Inline script</a>
+        <a href="#">Internal script</a>
+        <a href="#">External script</a>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function saludo (){
+            alert ("hola desde un elemento externo")
+            console.log("has hecho click");
+        }
+        document.getElementsByTagName("a").item(1).addEventListener("click", saludo);
+    </script>
+    <script src="Js/main.js"></script>
+</body>
+</html>
