@@ -133,9 +133,13 @@ let person = {
     blonde: false, // ultimo key sin coma siempre
     jump() {
         console.log("HEY ESTOY SALTANDO.")
-    }
+    },
+    presentarse() {
+        console.log(`me llamo ${this.name},tengo ${this.age} y ${this.blonde ? `soy rubio` : `soy moreno.`}`);
+    }  
 }
 
+person.presentarse()
 //Acceso por punto / Dot rotation
 
 console.log(person);
@@ -260,3 +264,80 @@ if (randomNumber === guessedNumber) {
 }    else {
     console.log("el numero secreto es menor");    
 }
+
+//ternary operator  (if else en una linea)   (condicion ? expresion cierta o expresion falsa)
+
+let variable = 12 < 10 ? "el primero es menor" : " el primero es mayor";
+console.log(variable);
+
+//switch
+let option = 3;
+switch (option){
+    case 1:
+        //bloque de codigo
+        console.log("option vale  1");
+        break;
+    case 2:
+        //bloque de codigo para opcion 2
+        console.log("opcion vale 2");  
+        break;
+        //bloque de codigo para opcion 3
+    case 3:
+        console.log("opcion vale 3");
+        break;
+    default: //de otro modo de PSeint
+        console.log("otra opcion");
+        break;      
+}
+console.clear();
+/*-------------------FUNCIONES-------------*/
+//Nombradas
+
+function greet(name, lastName){
+    console.log(`hola, ${name} ${lastName}. ¿Que tal?`);
+}
+
+greet();
+greet("Marcos", "Aurelio");
+
+//que devuelva el cuadrado de un numero
+//forma generica
+function square (number){
+    return number * number;
+}
+console.log(square(7));
+
+// Funciones Anonimas
+
+const saludar = function () {console.log("hello");};
+
+//--------------ordena numeros------------------/-
+
+let numbersArray = [5, 51, 1, 15];
+console.log(numbersArray);
+numbersArray.sort(); //me ordena segun ASCII
+console.log(numbersArray);
+
+
+
+function orderNumbers (a,b){
+    if (a < b) {
+        return -1;
+
+    }else if (a === b){
+        return 0;
+
+    }else{
+        return 1;
+    }
+}
+
+
+numbersArray.sort(function (a,b) {return a -b});
+
+numbersArray.sort(orderNumbers)
+console.log(numbersArray);
+
+
+
+
