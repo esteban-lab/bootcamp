@@ -30,7 +30,7 @@ function saludar() {
 
 saludar();
 
-console.clear();
+
 /*Inicializacion */
 
 let day;
@@ -289,7 +289,7 @@ switch (option){
         console.log("otra opcion");
         break;      
 }
-console.clear();
+
 /*-------------------FUNCIONES-------------*/
 //Nombradas
 
@@ -309,7 +309,7 @@ console.log(square(7));
 
 // Funciones Anonimas
 
-const saludar = function () {console.log("hello");};
+// const saludar = function () {console.log("hello");};
 
 //--------------ordena numeros------------------/-
 
@@ -333,10 +333,104 @@ function orderNumbers (a,b){
 }
 
 
-numbersArray.sort(function (a,b) {return a -b});
-
+numbersArray.sort(function (a,b) {return a - b });
 numbersArray.sort(orderNumbers)
 console.log(numbersArray);
+
+console.clear();
+
+//-----funciones de flecha---------//
+
+
+const perimeterSquare = (side) => side*4;
+
+console.log(perimeterSquare(5));
+
+
+// console.log(typeof function () {}); //funcion
+// console.log(typeof (()=> {})); //funcion
+
+//------------------de una funcion anonima normal a una de flecha----------------------//
+
+let perimeterOfSquare = function (side) { // Función anónima normal
+    return side * 4;
+    }
+    perimeterOfSquare = function (side) {return side * 4;} // (opcional) Una única línea
+    perimeterOfSquare = (side) => {return side * 4;} // Sustituyo function por la flecha después de params.
+    perimeterOfSquare = (side) => side * 4; // Si sólo quiero devolver algo, quito llaves y return.
+    perimeterOfSquare = side => side * 4; // Si sólo tiene 1 param, puedo quitar paréntesis.
+    
+    console.log(perimeterOfSquare(5));
+
+
+    //Como transformar una funcion anonima en uan de flecha
+    numbersArray.sort(function(a,b) {return a - b}); //--->
+
+    numbersArray.sort((a,b) => b - a);
+    console.log(numbersArray);
+
+
+//-----------Bucles----------------//
+
+//------------For------------------//
+//i++ = i=i+1
+
+for (let i = 0; i <= 10; i++) {
+    console.log(`indice: ${i}`);
+}
+
+//definir y rellenar un array con el indice i
+
+
+for (let i = 0; i <= 10; i++) {
+    console.log(`indice: ${i}`);
+}
+
+let arrayE = [];
+
+for (let i = 0; i <= 10; i++) {
+    arrayE.push(i); 
+}
+
+console.log(arrayE); //IMPRIME DEL 0 AL 10
+
+
+
+//---------WHILE-----------// CUANDO NO SE SABE EL NUMERO DE REPETICIONES
+
+let contador = 0;
+
+while (contador <= 10) {
+
+    console.log(contador);
+
+    contador++;
+}
+
+while(true) {  //bucle infinito
+    break;
+}
+
+console.log("no entra en el bucle infinito");
+
+//-----------FOR EACH----------------//
+// Se aplica a los array
+
+console.log(numbersArray);
+numbersArray.forEach(function (value,index) {
+    console.log(`indice ${index}: ${value}`);
+
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
