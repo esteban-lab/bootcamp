@@ -337,7 +337,7 @@ numbersArray.sort(function (a,b) {return a - b });
 numbersArray.sort(orderNumbers)
 console.log(numbersArray);
 
-console.clear();
+
 
 //-----funciones de flecha---------//
 
@@ -414,21 +414,97 @@ while(true) {  //bucle infinito
 console.log("no entra en el bucle infinito");
 
 //-----------FOR EACH----------------//
-// Se aplica a los array
+// Se aplica a cada elemento dentro del array
 
 console.log(numbersArray);
 numbersArray.forEach(function (value,index) {
     console.log(`indice ${index}: ${value}`);
-
 });
 
 
+numbersArray.forEach((value,index) => console.log (`indice ${index}: ${value}`)); 
 
 
+let otherArray = [];
+
+numbersArray.forEach(item => otherArray.push(item)); //asignamos elementos del numbersArray dentro del nuevo otherArray
+
+console.log(otherArray);
 
 
+//---------FOR OF----------//
+
+for (let item of numbersArray){
+    console.log(item);
+}
 
 
+//CONTINUE
+for (let i = 0; i < 5; i++){
+    if (i===3){//se salta el 3
+        continue
+    }
+    console.log(" using continue  ",i);
+}
+
+//BREAK
+let i=0;
+let k;
+
+
+mainLoop: while(true){ //mainLoop etiqueta creadad para romper el bucle que queramos
+    console.log("outer loop", i);
+    i++;
+    k = 1;
+    while(true){
+        console.log("inner loop", k);
+        k++
+        if (i === 5 && k === 5){
+            break mainLoop;
+        }else if (k === 5){
+            break;
+        }
+    }
+}
+
+console.clear()
+
+
+//-----------DOM-(document model object)-----------//
+//Basics
+console.log(document);
+console.log(document.domain)
+console.log(document.URL);
+document.title += "(DOM)"; // MODIFICA EL TITULO DEL DOCUMENTO
+console.log(document.title);
+
+//Selectors
+const family = document.getElementsByTagName("div");
+console.log(family);
+
+// array.from(family).forEach (item=> console.log(item)); //construyo un array con from
+// for (let familyMember of family){
+//     console.log(familyMember);
+// }
+
+const grandParent = document.getElementById("grandParent");
+console.log(grandParent);
+
+const parents = document.getElementsByClassName("parent");
+const parent1 = parents[0]; //accedo al array 0 de parents y los guardo en una variable
+
+const parent2 = document.getElementsByClassName("parent")[1];
+
+console.log(parent1,parent2);
+
+// query selector
+
+let element = document.querySelector(".grandParent div");
+console.log(element);
+
+parent1.style.backgroundColor = "#333"; //cambiar color directamente de js
+
+grandParent.style.backgroundColor ="#dddd"; //cambiar color directamente a gris
 
 
 
