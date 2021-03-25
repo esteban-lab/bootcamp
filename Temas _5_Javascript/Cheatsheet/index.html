@@ -32,6 +32,12 @@
         .child {
             background-color: khaki;
         }
+
+        .bg-red{
+            background-color: red;
+        }
+
+
     </style>
 </head>
 <body>
@@ -46,12 +52,12 @@
     <h1>Acceso al DOM</h1>
 
     <div class="grandParent" id="grandParent">
-        <div class="parent" id="parent1">
+        <div class="parent bg-dark rounded d-flex" id="parent1">
             <div class="child" id="child1">child 1 </div>
             <div class="child" id="child2">child 2 </div>
         </div>
         <div class="parent" id="parent2">
-            <div class="child" id="child3">child 1 </div>
+            <div class="child" id="child3"><span>child 3</span></div>
             <div class="child" id="child4">child 2 </div>
         </div>
     </div>
