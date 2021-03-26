@@ -467,7 +467,7 @@ mainLoop: while(true){ //mainLoop etiqueta creadad para romper el bucle que quer
     }
 }
 
-console.clear()
+
 
 
 //-----------DOM-(document model object)-----------//
@@ -574,3 +574,59 @@ link.textContent = "texto de enlace";
 link.setAttribute("href", "https://google.com")
 
 grandParent.appendChild(link);
+console.clear()
+
+
+//Events
+
+const colorButton = document.getElementsByTagName("button")[0];
+
+colorButton.addEventListener("click",function (event){
+    // console.log(event);
+    // console.log(event.target);
+    // document.body.classList.toggle("bg-red");
+    // console.log(event.target.tagName);
+
+    if (event.ctrlKey){
+        document.body.classList.toggle("bg-red");
+    }
+    console.log(`x: ${event.clientX} | y: ${event.clientY}`);
+    console.log(`Alt: ${event.altKey}. Shift: ${event.shiftKey}. Ctrl: ${event.ctrlKey}`);
+});
+
+const emailInput = document.querySelector("#emailInput"); //queryselector  y el selector por ID te devuelven el elemto directo
+emailInput.addEventListener("focus", inputListener);
+emailInput.addEventListener("blur", inputListener);
+
+function inputListener (e) {
+    console.log("Tipo de evento", e.type)
+
+    // if (e.type === "focus") {
+    //     e.target.classList.add("bg-red"); 
+
+    // }else if (e.type === "blur"){
+    //     e.target.classList.remove("bg-blue");
+    // }
+   
+}
+
+const changeTitle = e => {
+    document.querySelectorAll("h1")[2].textContent = emailInput.value;// seleccionames el texto del titulo y lo igualamos al avalor del emailinput
+
+}
+
+emailInput.addEventListener("keydown", inputListener);
+emailInput.addEventListener("keyup", changeTitle);
+
+const container = document.getElementById("container");
+
+container.addEventListener("mouseover", inputListener);
+container.addEventListener("mouseout", inputListener);
+
+function coords(e){
+    document.querySelectorAll("h1")[3].textContent = `x: ${e.clientX} | y: ${e.clientY}`;
+}
+
+document.body.addEventListener("mousemove", coords);
+
+

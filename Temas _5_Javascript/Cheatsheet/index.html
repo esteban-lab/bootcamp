@@ -22,7 +22,7 @@
             display: flex;
             gap: 25px;
             padding: 25px;
-            flex-grow: 1;
+            flex-grow: wrap;
         }
 
         .parent {
@@ -34,7 +34,12 @@
         }
 
         .bg-red{
-            background-color: red;
+            background-color:blue;
+        }
+
+        #container{
+            height: 100px;
+            border: 3px solid green;
         }
 
 
@@ -62,7 +67,21 @@
         </div>
     </div>
 
+<h1>Eventos</h1>
 
+<div id = "container">
+    <button>Cambiar de color</button>
+</div>
+
+
+
+<label for="emailInput">Introduce tu mail</label>
+<input type="mail" id="emailInput">
+
+
+<h1>Coords</h1>
+
+<div style="height: 1000px;"></div>
 
 
     <script>
@@ -70,6 +89,7 @@
             alert ("hola desde un elemento externo")
             console.log("has hecho click");
         }
+        //-------------------------------------------------se llama a saludo sin parentesis//
         document.getElementsByTagName("a").item(1).addEventListener("click", saludo);
     </script>
     <script src="Js/main.js"></script>
