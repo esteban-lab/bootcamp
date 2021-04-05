@@ -29,10 +29,10 @@ button.addEventListener("click",function (event){
 
 //partado 3
 
-const listItems = document.getElementsByTagName ("li");
- const imgae = document.querySelector("img");
+const listItems = document.getElementsByTagName("li");
+const image = document.querySelector("img");
 
- const changeImage = (e) => Image.src = e.target.textContent;
+const changeImage = (e) => image.src = e.target.textContent;
 
 listItems[0].addEventListener("click", changeImage);
 listItems[1].addEventListener("click", changeImage);
