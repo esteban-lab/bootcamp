@@ -257,3 +257,56 @@ const filterItem = (array,numberToFilter) => {
 const arrayFiltered = [1,5,6,7,5]
 filterItem(arrayFiltered,5);
 console.log(arrayFiltered);
+
+//25
+
+function propiedadesArray(object){
+    return Object.keys(object);
+}
+
+ 
+
+let clase = {
+    profesor: "cristian",
+    alumno: "maria",
+    alumno2: "elvira",
+}
+
+ 
+
+console.log(propiedadesArray(clase));
+
+ 
+
+const valoresArray = (object) => Object.values(object);
+
+ 
+
+console.log(valoresArray(clase));
+
+
+
+//26 crea una funcion que invierta un string
+function stringReverse (string){
+    reversedString = "";
+    for (let i = string.length - 1; i >=0; i--){
+        reversedString += string.charAt(i);
+    }
+    return reversedString;
+}
+
+console.log(stringReverse(". esteban ayala vega jorge esteban ayala vega"));
+
+//27 crear una funcion que compare strings sin tener en cuenta las mayusculas y minisculas
+
+//28
+
+//29 crea una funcion unica en linea que reciba un valor logico y devuelva lo opuesto
+
+const negate = (logical) => !logical
+console.log(negate(true));
+console.log(negate(false));
+
+
+
+
