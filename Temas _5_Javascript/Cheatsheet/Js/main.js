@@ -188,6 +188,30 @@ person3.talk();
 
 console.clear();
 
+//Object Constructor using functions
+
+function Car(brand, color, weight, topSpeed){
+    this.brand = brand;
+    this.color = color;
+    this.weight = weight;
+    this.topSpeed = topSpeed;
+    this.getDescription = function() {
+        return `This ${this.color} ${this.brand} weigths ${this.weight}`+
+        `kilos and can reach up to ${this.topSpeed} kms/h.`;
+    }
+}
+
+const car1 = new Car("mercedes","red",undefined, 200);
+const car2 = new Car("volvo","white",2500,180);
+const car3 = new Car("volkswagen","blue",1500,174);
+
+console.log(car1,car2,car3);
+
+console.log(car2.weight);
+
+console.log(car3.getDescription());
+
+
 
 //--------------Arrays---------------//
 let selectedColors = ["red", "blue"]; //array de strings
@@ -574,7 +598,7 @@ link.textContent = "texto de enlace";
 link.setAttribute("href", "https://google.com")
 
 grandParent.appendChild(link);
-console.clear()
+
 
 
 //Events
