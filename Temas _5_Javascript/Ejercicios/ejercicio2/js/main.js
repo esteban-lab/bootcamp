@@ -1,13 +1,13 @@
 
 
-function User(name, firstLastName, secondLastName , email, age, city, productsCount){
+function User(name, firstLastName, secondLastName , email, age, city){
     this.name = name;
     this.firstLastName = firstLastName;
     this.secondLastName = secondLastName;
     this.email = email;
     this.age = age;
     this.city = city;
-    this.productsCount = productsCount;
+    this.productsCount = 0;
  
     this.incrementProducts = function (){
         this.productsCount++;
@@ -38,4 +38,45 @@ for (let user of users){
     select.appendChild(newOption);
 }
 
+//rellenar la lista acon la info de un usuario
+function fillList(user){
+
+    list.innerHTML = "";
+
+
+for (const propertyName in user) {
+    const value = user [propertyName];
+
+    if (typeof value !== "function"){
+    // console.log(`propertyName: ${propertyName}, value: ${value}`);
+    const newListItem =document.createElement("li");
+    newListItem.innerHTML = `<b>${propertyName}:</b> ${value}`;
+    newListItem.classList.add("list-group-item");
+    list.appendChild(newListItem);
+    }
+  }
+}
+//estado inicial
+fillList(users[0]);
+
+function processProducts(e){
+    const selectedUser = users.find(user => user.name === select.value);
+
+    e.target === incrementButton
+    ? selectedUser.incrementProducts()
+    : selectedUser.emptyProducts()
+
+    fillList(selectedUser);
+}
+
+
+//añadir Listeners
+
+select.addEventListener("change", e => {
+    const selectedUser = users.find(user => user.name === select.value);
+    fillList(selectedUser);
+});
+
+incrementButton.addEventListener("click", processProducts);
+emptyButton.addEventListener("click", processProducts);
 

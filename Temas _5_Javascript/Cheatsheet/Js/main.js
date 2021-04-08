@@ -88,7 +88,7 @@ console.log(typeof array, typeof array2);
 console.log(typeof new Date("20021-05-12"));
 console.log(typeof new Error("Mensaje de Error"));
 
-console.clear();
+
 /*------------------Srings---------------*/
 
 str = "Hola Futuro";
@@ -186,7 +186,6 @@ const person3 = {
 person2.talk();
 person3.talk();
 
-console.clear();
 
 //Object Constructor using functions
 
@@ -330,6 +329,72 @@ function square (number){
     return number * number;
 }
 console.log(square(7));
+
+//higher order Functions
+//map
+
+let arr1 = [1,2,3];
+let arr2 = [];
+
+for (let num of arr1){
+    arr2.push
+}
+
+
+
+arr1=[1,2,3];
+arr2 = arr1.map(item => item *2);
+
+console.log("resultado con map: ", arra1,arr2);
+
+//a partir de un array con años de nacimiento calcular las edades
+const birthYears = [1980, 1990,1975, 1970];
+const ages = birthYears.map(year => 2021 - year);
+console.log(ages);
+
+
+//filter
+
+
+const prices = [150,50,49,51,15,237];
+const expensives = prices.filter(price => price >=50);
+console.log(expensives);
+
+const cars = [
+    {
+        brand :"bmw",
+        year: 2010,
+        plateNumber: "HGTI23"
+
+    },
+    {
+        brand :"MERDECES",
+        year: 1990,
+        plateNumber: "FDSFD23"
+
+    },
+    {
+        brand :"VOLVO",
+        year: 2021,
+        plateNumber: "HGTI323"
+
+    },
+];
+
+console.log(cars.filter(car=> car.plateNumber === "HGTI23"));
+
+//cars = [ "bmw", "mercedes", "volvo"]
+
+console.log(cars.map(car => car.brand));
+
+
+//sort pertenece solo a los arrays
+console.log(cars);
+
+cars.sort((car1, car2) => car1.year - car2.year);
+
+console.log(cars);
+
 
 // Funciones Anonimas
 
