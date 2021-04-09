@@ -186,6 +186,17 @@ const person3 = {
 person2.talk();
 person3.talk();
 
+//Copiar Objetos
+
+let obj1 = {property: 5};
+let obj2 = obj1; //No es una copia, es el mismo con dos nombres
+
+obj2 = {...obj1}; // Copia superficial que usaremos casi sieempre
+obj2 = JSON.parse(JSON.stringify(obj1)); // Copia profunda total
+
+
+
+
 
 //Object Constructor using functions
 
@@ -394,6 +405,8 @@ console.log(cars);
 cars.sort((car1, car2) => car1.year - car2.year);
 
 console.log(cars);
+
+
 
 
 // Funciones Anonimas
