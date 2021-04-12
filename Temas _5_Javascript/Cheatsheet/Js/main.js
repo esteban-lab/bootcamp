@@ -396,6 +396,12 @@ cars.sort((car1, car2) => car1.year - car2.year);
 console.log(cars);
 
 
+//reduce
+
+
+
+
+
 // Funciones Anonimas
 
 // const saludar = function () {console.log("hello");};
