@@ -48,8 +48,20 @@ fetch(URL)
 const POST_URL ="https://jsonplaceholder.typicode.com/posts";
 
 
-const http ={
+const newPost = {
+    title: "mi titulo",
+    body : "mi cuerpo de publicacion"
+
+}
+
+const http = {
     method: "POST",
+    headers: {
+        "content-type": "application/json"
+    },
+    body: JSON.stringify(newPost)
 };
 
 fetch(POST_URL, http)
+    then(response => response.jason())
+    then(data => console.log(data))
