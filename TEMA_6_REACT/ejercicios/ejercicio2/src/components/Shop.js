@@ -23,7 +23,9 @@ export default function Shop() {
 
 return(
     <div>
-
+        <List/>
+        <List/>
+        <List/>
     </div>
 )
 
