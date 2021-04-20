@@ -2,7 +2,7 @@
 import './App.css';
 import Shop from "./components/Shop";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
      <Shop/>
