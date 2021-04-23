@@ -1,5 +1,13 @@
-export default function Agenda({ contactos }) {
-    console.log(contactos);
+export default function Agenda({ contactos, setContactos }) {
+   
+    const removeContact = (tlf) =>{
+        return e =>{
+            setContactos(contactos.filter(contacto => contacto.tlf !== tlf));
+        }
+    }
+
+
+
     return (
         <div className="row">
             {contactos.map((contacto, index) => {
@@ -10,6 +18,7 @@ export default function Agenda({ contactos }) {
                     <li className="list-group-item">{contacto.apellidos}</li>
                     <li className="list-group-item">{contacto.tlf}</li>
                     <li className="list-group-item">{contacto.direccion}, {contacto.cp}, {contacto.ciudad}</li>
+                    <li className="list-group-item" ><button className="btn btn-warning" onClick={removeContact(contacto.tlf)}> Eliminar</button></li>
                 </ul>
                 );
             })}
