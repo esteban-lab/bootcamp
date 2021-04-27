@@ -10,19 +10,20 @@ import Appej4 from "./Paginas/Appej4";
   return (
     <div className="App">
      <BrowserRouter>
-            <NavLink to="/Paginas/Appej1"> Pagina 1</NavLink>
-            <NavLink to="/Paginas/Appej2"> Pagina 2</NavLink>
-            <NavLink to="/Paginas/Appej3">  Pagina 3</NavLink>
-            <NavLink to="/Paginas/Appej4">  Pagina 4</NavLink>
-
+            <nav class= "navbar navbar-light bg-dark">
+            <NavLink className="text-white" to="/Paginas/Appej1" activeClassName="active text-warning"> Pagina 1</NavLink>
+            <NavLink className="text-white" to="/Paginas/Appej2" activeClassName="active text-warning"> Pagina 2</NavLink>
+            <NavLink className="text-white" to="/Paginas/Appej3" activeClassName="active text-warning">  Pagina 3</NavLink>
+            <NavLink className="text-white" to="/Paginas/Appej4" activeClassName="active text-warning">  Pagina 4</NavLink>
+            </nav>
             <Switch>
                 <Route exact path ="/Paginas/Appej1" component={Appej1}/>
-                <Route path ="/Paginas/Appej2" component={Appej2}/>
+                <Route exact path ="/Paginas/Appej2" component={Appej2}/>
                 <Route path ="/Paginas/Appej3" component={AppeJ3}/>
                 <Route path ="/Paginas/Appej4" component={Appej4}/>
 
            
-                <Route component={Error}/>
+                {/* <Route component={Error}/> */}
             </Switch>
      
      
