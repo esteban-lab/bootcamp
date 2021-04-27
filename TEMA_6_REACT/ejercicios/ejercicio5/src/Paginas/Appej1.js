@@ -1,6 +1,7 @@
-import Card from "./components/Card";
+import Card from "../components/Card";
+import ReactDOM from "react-dom";
 
-function App() {
+function Appej1() {
   return (
     <div>
       <Card
@@ -22,4 +23,4 @@ function App() {
 }
 
 
-export default App;
+export default Appej1 ;

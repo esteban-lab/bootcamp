@@ -1,8 +1,7 @@
-import './App.css';
-import List from "./components/List";
-import Input from "./components/Input";
+import List from "../components/List";
+import Input from "../components/Input";
 
-function App() {
+function Appej4() {
 
   const todoo = []
   
@@ -20,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default Appej4;

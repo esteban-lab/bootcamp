@@ -1,9 +1,8 @@
 import {useState} from "react";
-import './App.css';
-import Agenda from "./components/Agenda";
-import Formulario from "./components/Formulario";
+import Agenda from "../components/Agenda";
+import Formulario from "../components/Formulario";
 
-function App() {
+function AppeJ3() {
 
 
   const InitialContactosState = [
@@ -26,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppeJ3;

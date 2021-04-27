@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import FirstComponent, {SecondComponent, ThirdComponent} from './components/FirstComponent';
 import Counter from "./components/counter";
 import UseEffectComponent from './components/UseEffectComponent';

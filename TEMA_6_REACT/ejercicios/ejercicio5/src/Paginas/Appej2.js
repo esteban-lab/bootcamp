@@ -1,8 +1,7 @@
 
-import './App.css';
-import Shop from "./components/Shop";
+import Shop from "../components/Shop";
 
-function App(props) {
+function Appej2(props) {
   return (
     <div className="App">
      <Shop/>
@@ -27,4 +26,4 @@ const contactos = {
       {id: 35, producto: "Arena de gato", marca: "Limpior", precio: 1.10},
   ]
 };
-export default App;
+export default Appej2;

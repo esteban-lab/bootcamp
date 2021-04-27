@@ -14,8 +14,7 @@ export default function Router() {
             <NavLink to="/" activeClassName="active"> Ir a Inicio </NavLink>
             <NavLink to="/dashboard" > Panel de control</NavLink>
             <NavLink to="/record/7">  Record 1</NavLink>
-            <NavLink to="/record/6">  Record 2</NavLink>
-            <NavLink to="/record/1">  Record 3</NavLink>
+         
 
             <Switch>
                 <Route exact path ="/" component={Index}/>
