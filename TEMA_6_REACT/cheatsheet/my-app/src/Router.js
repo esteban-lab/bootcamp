@@ -18,8 +18,8 @@ export default function Router() {
 
             <Switch>
                 <Route exact path ="/" component={Index}/>
-                <Route path ="/dashboard" component={Dashboard}/>
-                <Route path ="/record/:user" component={Record}/>
+                <Route exact path ="/dashboard" component={Dashboard}/>
+                <Route exact path ="/record/:user" component={Record}/>
            
                 <Route component={Error}/>
             </Switch>
