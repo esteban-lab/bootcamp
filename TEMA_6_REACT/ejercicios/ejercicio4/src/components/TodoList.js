@@ -15,6 +15,7 @@ export default function TodoList({todos, setTodos}) {
         
     return (                   
         <ul className="list-group">
+            
              {todos.map((todo, index) => {
                 return (
                     <li className={`list-group-item ${todo.completed ? "completed" : ""}`} 
