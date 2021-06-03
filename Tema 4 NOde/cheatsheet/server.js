@@ -1,34 +1,45 @@
+require("./config/congif");
+
 const express = require("express");
 const app = express();
 
-
-//antes de los endpoints usamos middlewares
-
 app.use(express.json());
 
-app.get("/", (req,res)=> {
-    res.json({message:"peticion recibida correctamente"});
+let users =[];
+
+app.get("/users", (req,res)=>{
+    const user = {name: "jhon", email: "jhon@gmail.com"}
+    res.json({ok: true, results: users});
 });
 
-app.get("/:user", (req,res)=> {
-    let user =req.params.user;
-    res.json({message:`peticion Get con parametro: ${user}`});
+app.put("/users/id", (req,res) =>{
+    const id = req.params.id;
+
+    res.json({id})
 });
 
+app.delete("/:id", (req,res) =>{
+    const id = req.params.id;
 
-app.post("/newuser", (req,res)=> {
-    let body = req.body;
+    const removedUser = users.splice(id,1);
 
-    if(body.newuser){
-        res.status(200).json({message:`recibido name: ${body.newuser}`});
-    }else {
-        res.status(400).json({ok: false, message:"el name es obligatorio"});;
+    res.status(200).json(removedUser);
+});
+
+app.post("/", (req,res) =>{
+    const body = req.body;
+
+    if(!body.name) {
+        res.status(400).json({ok:false, message: "name is requiered "})
+    }else{
+        users.push(body)
+        res.status(201).json({user: body});
     }
-
-   
 });
 
+app.listen(process.env.PORT, () => {
+    console.log("listening on port: ", process.env.PORT);
+});
 
-app.listen(3000);
 
 
